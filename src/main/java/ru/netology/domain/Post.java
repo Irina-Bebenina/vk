@@ -1,48 +1,32 @@
-package ru.netology;
+package ru.netology.domain;
+
+import java.util.Date;
 
 public class Post {
     private int id;
     private int userId;
     private int ownerId;
     private int createdBy;
-    private int dataCreate;
-    private int textPost;
+    private Date dataCreate;
+    private String textPost;
     private int replyOwnerId;
     private int replyPostId;
     private int friendsOnly;
-    private int subjectId;
-    private int urlSource;
-    private int likeSum;
-    private int commentSum;
-    private int shareSum;
-    private int viewSum;
     private int signerId;
-    private int canPin;
-    private int canDelete;
-    private int canEdit;
+    private boolean canPin;
+    private boolean canDelete;
+    private boolean canEdit;
     private int isPinned;
     private int markedAsAds;
     private boolean isFavorite;
     private int postponedId;
-
-    public String comments(int count, boolean canPost, boolean groupsCanPost, boolean canClose, boolean canOpen) {
-        return null;
-    };
-    private String copyright;
-
-    public String likes(int count, boolean userLikes, boolean canLike, boolean canPublish) {
-        return null;
-    }
-
-    public String reposts(int count, boolean userReposted) {
-        return null;
-    }
-
-    public String views(int count) {
-        return null;
-    }
-
-    private String postType;
+    private int subjectId;
+    private int urlSource;
+    private boolean signatureView;
+    private int likeSum;
+    private int commentSum;
+    private int shareSum;
+    private int viewSum;
 
     public int getId() {
         return id;
@@ -76,19 +60,19 @@ public class Post {
         this.createdBy = createdBy;
     }
 
-    public int getDataCreate() {
+    public Date getDataCreate() {
         return dataCreate;
     }
 
-    public void setDataCreate(int dataCreate) {
+    public void setDataCreate(Date dataCreate) {
         this.dataCreate = dataCreate;
     }
 
-    public int getTextPost() {
+    public String getTextPost() {
         return textPost;
     }
 
-    public void setTextPost(int textPost) {
+    public void setTextPost(String textPost) {
         this.textPost = textPost;
     }
 
@@ -116,54 +100,6 @@ public class Post {
         this.friendsOnly = friendsOnly;
     }
 
-    public int getSubjectId() {
-        return subjectId;
-    }
-
-    public void setSubjectId(int subjectId) {
-        this.subjectId = subjectId;
-    }
-
-    public int getUrlSource() {
-        return urlSource;
-    }
-
-    public void setUrlSource(int urlSource) {
-        this.urlSource = urlSource;
-    }
-
-    public int getLikeSum() {
-        return likeSum;
-    }
-
-    public void setLikeSum(int likeSum) {
-        this.likeSum = likeSum;
-    }
-
-    public int getCommentSum() {
-        return commentSum;
-    }
-
-    public void setCommentSum(int commentSum) {
-        this.commentSum = commentSum;
-    }
-
-    public int getShareSum() {
-        return shareSum;
-    }
-
-    public void setShareSum(int shareSum) {
-        this.shareSum = shareSum;
-    }
-
-    public int getViewSum() {
-        return viewSum;
-    }
-
-    public void setViewSum(int viewSum) {
-        this.viewSum = viewSum;
-    }
-
     public int getSignerId() {
         return signerId;
     }
@@ -172,27 +108,27 @@ public class Post {
         this.signerId = signerId;
     }
 
-    public int getCanPin() {
+    public boolean isCanPin() {
         return canPin;
     }
 
-    public void setCanPin(int canPin) {
+    public void setCanPin(boolean canPin) {
         this.canPin = canPin;
     }
 
-    public int getCanDelete() {
+    public boolean isCanDelete() {
         return canDelete;
     }
 
-    public void setCanDelete(int canDelete) {
+    public void setCanDelete(boolean canDelete) {
         this.canDelete = canDelete;
     }
 
-    public int getCanEdit() {
+    public boolean isCanEdit() {
         return canEdit;
     }
 
-    public void setCanEdit(int canEdit) {
+    public void setCanEdit(boolean canEdit) {
         this.canEdit = canEdit;
     }
 
@@ -228,24 +164,60 @@ public class Post {
         this.postponedId = postponedId;
     }
 
-    public String getCopyright() {
-        return copyright;
+    public int getSubjectId() {
+        return subjectId;
     }
 
-    public void setCopyright(String copyright) {
-        this.copyright = copyright;
+    public void setSubjectId(int subjectId) {
+        this.subjectId = subjectId;
     }
 
-    public String getPostType() {
-        return postType;
+    public int getUrlSource() {
+        return urlSource;
     }
 
-    public void setPostType(String postType) {
-        this.postType = postType;
+    public void setUrlSource(int urlSource) {
+        this.urlSource = urlSource;
     }
 
-    public String geo(String type, String coordinates, String place) {
-        return null;
+    public boolean isSignatureView() {
+        return signatureView;
+    }
+
+    public void setSignatureView(boolean signatureView) {
+        this.signatureView = signatureView;
+    }
+
+    public int getLikeSum() {
+        return likeSum;
+    }
+
+    public void setLikeSum(int likeSum) {
+        this.likeSum = likeSum;
+    }
+
+    public int getCommentSum() {
+        return commentSum;
+    }
+
+    public void setCommentSum(int commentSum) {
+        this.commentSum = commentSum;
+    }
+
+    public int getShareSum() {
+        return shareSum;
+    }
+
+    public void setShareSum(int shareSum) {
+        this.shareSum = shareSum;
+    }
+
+    public int getViewSum() {
+        return viewSum;
+    }
+
+    public void setViewSum(int viewSum) {
+        this.viewSum = viewSum;
     }
 }
 
