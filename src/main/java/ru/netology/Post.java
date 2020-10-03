@@ -3,14 +3,46 @@ package ru.netology;
 public class Post {
     private int id;
     private int userId;
+    private int ownerId;
+    private int createdBy;
     private int dataCreate;
     private int textPost;
+    private int replyOwnerId;
+    private int replyPostId;
+    private int friendsOnly;
     private int subjectId;
     private int urlSource;
     private int likeSum;
     private int commentSum;
     private int shareSum;
     private int viewSum;
+    private int signerId;
+    private int canPin;
+    private int canDelete;
+    private int canEdit;
+    private int isPinned;
+    private int markedAsAds;
+    private boolean isFavorite;
+    private int postponedId;
+
+    public String comments(int count, boolean canPost, boolean groupsCanPost, boolean canClose, boolean canOpen) {
+        return null;
+    };
+    private String copyright;
+
+    public String likes(int count, boolean userLikes, boolean canLike, boolean canPublish) {
+        return null;
+    }
+
+    public String reposts(int count, boolean userReposted) {
+        return null;
+    }
+
+    public String views(int count) {
+        return null;
+    }
+
+    private String postType;
 
     public int getId() {
         return id;
@@ -28,6 +60,22 @@ public class Post {
         this.userId = userId;
     }
 
+    public int getOwnerId() {
+        return ownerId;
+    }
+
+    public void setOwnerId(int ownerId) {
+        this.ownerId = ownerId;
+    }
+
+    public int getCreatedBy() {
+        return createdBy;
+    }
+
+    public void setCreatedBy(int createdBy) {
+        this.createdBy = createdBy;
+    }
+
     public int getDataCreate() {
         return dataCreate;
     }
@@ -42,6 +90,30 @@ public class Post {
 
     public void setTextPost(int textPost) {
         this.textPost = textPost;
+    }
+
+    public int getReplyOwnerId() {
+        return replyOwnerId;
+    }
+
+    public void setReplyOwnerId(int replyOwnerId) {
+        this.replyOwnerId = replyOwnerId;
+    }
+
+    public int getReplyPostId() {
+        return replyPostId;
+    }
+
+    public void setReplyPostId(int replyPostId) {
+        this.replyPostId = replyPostId;
+    }
+
+    public int getFriendsOnly() {
+        return friendsOnly;
+    }
+
+    public void setFriendsOnly(int friendsOnly) {
+        this.friendsOnly = friendsOnly;
     }
 
     public int getSubjectId() {
@@ -91,6 +163,92 @@ public class Post {
     public void setViewSum(int viewSum) {
         this.viewSum = viewSum;
     }
+
+    public int getSignerId() {
+        return signerId;
+    }
+
+    public void setSignerId(int signerId) {
+        this.signerId = signerId;
+    }
+
+    public int getCanPin() {
+        return canPin;
+    }
+
+    public void setCanPin(int canPin) {
+        this.canPin = canPin;
+    }
+
+    public int getCanDelete() {
+        return canDelete;
+    }
+
+    public void setCanDelete(int canDelete) {
+        this.canDelete = canDelete;
+    }
+
+    public int getCanEdit() {
+        return canEdit;
+    }
+
+    public void setCanEdit(int canEdit) {
+        this.canEdit = canEdit;
+    }
+
+    public int getIsPinned() {
+        return isPinned;
+    }
+
+    public void setIsPinned(int isPinned) {
+        this.isPinned = isPinned;
+    }
+
+    public int getMarkedAsAds() {
+        return markedAsAds;
+    }
+
+    public void setMarkedAsAds(int markedAsAds) {
+        this.markedAsAds = markedAsAds;
+    }
+
+    public boolean isFavorite() {
+        return isFavorite;
+    }
+
+    public void setFavorite(boolean favorite) {
+        isFavorite = favorite;
+    }
+
+    public int getPostponedId() {
+        return postponedId;
+    }
+
+    public void setPostponedId(int postponedId) {
+        this.postponedId = postponedId;
+    }
+
+    public String getCopyright() {
+        return copyright;
+    }
+
+    public void setCopyright(String copyright) {
+        this.copyright = copyright;
+    }
+
+    public String getPostType() {
+        return postType;
+    }
+
+    public void setPostType(String postType) {
+        this.postType = postType;
+    }
+
+    public String geo(String type, String coordinates, String place) {
+        return null;
+    }
 }
+
+
 
 
