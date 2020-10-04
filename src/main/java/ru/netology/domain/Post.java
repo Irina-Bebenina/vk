@@ -6,6 +6,7 @@ public class Post {
     private int id;
     private int userId;
     private int ownerId;
+    private int postTime;
     private int createdBy;
     private Date dataCreate;
     private String textPost;
@@ -50,6 +51,14 @@ public class Post {
 
     public void setOwnerId(int ownerId) {
         this.ownerId = ownerId;
+    }
+
+    public int getPostTime() {
+        return postTime;
+    }
+
+    public void setPostTime(int postTime) {
+        this.postTime = postTime;
     }
 
     public int getCreatedBy() {
