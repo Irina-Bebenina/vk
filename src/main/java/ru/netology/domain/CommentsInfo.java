@@ -1,126 +1,49 @@
 package ru.netology.domain;
 
 public class CommentsInfo {
-    private int id;
-    private int userId;
-    private String postId;
-    private String parentId;
-    private int dataCreate;
-    private String textPost;
-    private int replyToUser;
-    private int replyToComment;
-    private String ulrUrl;
-    private String urlVideo;
-    private String urlAudio;
-    private String urlFile;
-    private int likeSum;
+    private int count;
+    private boolean canPost;
+    private boolean groupsCanPost;
+    private boolean canClose;
+    private boolean canOpen;
 
-    public int getId() {
-        return id;
+    public int getCount() {
+        return count;
     }
 
-    public void setId(int id) {
-        this.id = id;
+    public void setCount(int count) {
+        this.count = count;
     }
 
-    public int getUserId() {
-        return userId;
+    public boolean isCanPost() {
+        return canPost;
     }
 
-    public void setUserId(int userId) {
-        this.userId = userId;
+    public void setCanPost(boolean canPost) {
+        this.canPost = canPost;
     }
 
-    public String getPostId() {
-        return postId;
+    public boolean isGroupsCanPost() {
+        return groupsCanPost;
     }
 
-    public void setPostId(String postId) {
-        this.postId = postId;
+    public void setGroupsCanPost(boolean groupsCanPost) {
+        this.groupsCanPost = groupsCanPost;
     }
 
-    public String getParentId() {
-        return parentId;
+    public boolean isCanClose() {
+        return canClose;
     }
 
-    public void setParentId(String parentId) {
-        this.parentId = parentId;
+    public void setCanClose(boolean canClose) {
+        this.canClose = canClose;
     }
 
-    public int getDataCreate() {
-        return dataCreate;
+    public boolean isCanOpen() {
+        return canOpen;
     }
 
-    public void setDataCreate(int dataCreate) {
-        this.dataCreate = dataCreate;
-    }
-
-    public String getTextPost() {
-        return textPost;
-    }
-
-    public void setTextPost(String textPost) {
-        this.textPost = textPost;
-    }
-
-    public int getReplyToUser() {
-        return replyToUser;
-    }
-
-    public void setReplyToUser(int replyToUser) {
-        this.replyToUser = replyToUser;
-    }
-
-    public int getReplyToComment() {
-        return replyToComment;
-    }
-
-    public void setReplyToComment(int replyToComment) {
-        this.replyToComment = replyToComment;
-    }
-
-    public String getUlrUrl() {
-        return ulrUrl;
-    }
-
-    public void setUlrUrl(String ulrUrl) {
-        this.ulrUrl = ulrUrl;
-    }
-
-    public String getUrlVideo() {
-        return urlVideo;
-    }
-
-    public void setUrlVideo(String urlVideo) {
-        this.urlVideo = urlVideo;
-    }
-
-    public String getUrlAudio() {
-        return urlAudio;
-    }
-
-    public void setUrlAudio(String urlAudio) {
-        this.urlAudio = urlAudio;
-    }
-
-    public String getUrlFile() {
-        return urlFile;
-    }
-
-    public void setUrlFile(String urlFile) {
-        this.urlFile = urlFile;
-    }
-
-    public int getLikeSum() {
-        return likeSum;
-    }
-
-    public void setLikeSum(int likeSum) {
-        this.likeSum = likeSum;
-    }
-
-    public String thread(int count, boolean canPost, boolean showReplyButton, boolean groupCanPost) {
-
-        return null;
+    public void setCanOpen(boolean canOpen) {
+        this.canOpen = canOpen;
     }
 }

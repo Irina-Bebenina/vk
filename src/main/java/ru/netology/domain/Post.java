@@ -1,64 +1,55 @@
 package ru.netology.domain;
 
+import javax.xml.crypto.Data;
 import java.util.Date;
 
 public class Post {
-    private int id;
-    private int userId;
-    private int ownerId;
-    private int postTime;
+    private int postID;
+    private int UserID;
+    private int ownerID;
     private int createdBy;
-    private Date dataCreate;
+    private Data dataCreate;
     private String textPost;
-    private int replyOwnerId;
-    private int replyPostId;
+    private int replyOwnerID;
+    private int replyPostID;
     private int friendsOnly;
-    private int signerId;
+    private CommentsInfo commentsInfo;
+    private LikesInfo likesService;
+    private ViewsInfo viesService;
+    private GeoInfo geoInfo;
+    private int signedID;
     private boolean canPin;
     private boolean canDelete;
     private boolean canEdit;
-    private int isPinned;
-    private int markedAsAds;
-    private boolean isFavorite;
-    private int postponedId;
-    private int subjectId;
-    private int urlSource;
-    private boolean signatureView;
-    private int likeSum;
-    private int commentSum;
-    private int shareSum;
-    private int viewSum;
+    private boolean isPinned;
+    private boolean markedAsAds;
+    private boolean isFavourite;
+    private int postponedID;
+    private String imageURL;
+    private String postType;
 
-    public int getId() {
-        return id;
+    public int getPostID() {
+        return postID;
     }
 
-    public void setId(int id) {
-        this.id = id;
+    public void setPostID(int postID) {
+        this.postID = postID;
     }
 
-    public int getUserId() {
-        return userId;
+    public int getUserID() {
+        return UserID;
     }
 
-    public void setUserId(int userId) {
-        this.userId = userId;
+    public void setUserID(int userID) {
+        UserID = userID;
     }
 
-    public int getOwnerId() {
-        return ownerId;
+    public int getOwnerID() {
+        return ownerID;
     }
 
-    public void setOwnerId(int ownerId) {
-        this.ownerId = ownerId;
-    }
-
-    public int getPostTime() {
-        return postTime;
-    }
-
-    public void setPostTime(int postTime) {
-        this.postTime = postTime;
+    public void setOwnerID(int ownerID) {
+        this.ownerID = ownerID;
     }
 
     public int getCreatedBy() {
@@ -69,11 +60,11 @@ public class Post {
         this.createdBy = createdBy;
     }
 
-    public Date getDataCreate() {
+    public Data getDataCreate() {
         return dataCreate;
     }
 
-    public void setDataCreate(Date dataCreate) {
+    public void setDataCreate(Data dataCreate) {
         this.dataCreate = dataCreate;
     }
 
@@ -85,20 +76,20 @@ public class Post {
         this.textPost = textPost;
     }
 
-    public int getReplyOwnerId() {
-        return replyOwnerId;
+    public int getReplyOwnerID() {
+        return replyOwnerID;
     }
 
-    public void setReplyOwnerId(int replyOwnerId) {
-        this.replyOwnerId = replyOwnerId;
+    public void setReplyOwnerID(int replyOwnerID) {
+        this.replyOwnerID = replyOwnerID;
     }
 
-    public int getReplyPostId() {
-        return replyPostId;
+    public int getReplyPostID() {
+        return replyPostID;
     }
 
-    public void setReplyPostId(int replyPostId) {
-        this.replyPostId = replyPostId;
+    public void setReplyPostID(int replyPostID) {
+        this.replyPostID = replyPostID;
     }
 
     public int getFriendsOnly() {
@@ -109,12 +100,44 @@ public class Post {
         this.friendsOnly = friendsOnly;
     }
 
-    public int getSignerId() {
-        return signerId;
+    public CommentsInfo getCommentsInfo() {
+        return commentsInfo;
     }
 
-    public void setSignerId(int signerId) {
-        this.signerId = signerId;
+    public void setCommentsInfo(CommentsInfo commentsInfo) {
+        this.commentsInfo = commentsInfo;
+    }
+
+    public LikesInfo getLikesService() {
+        return likesService;
+    }
+
+    public void setLikesService(LikesInfo likesService) {
+        this.likesService = likesService;
+    }
+
+    public ViewsInfo getViesService() {
+        return viesService;
+    }
+
+    public void setViesService(ViewsInfo viesService) {
+        this.viesService = viesService;
+    }
+
+    public GeoInfo getGeoInfo() {
+        return geoInfo;
+    }
+
+    public void setGeoInfo(GeoInfo geoInfo) {
+        this.geoInfo = geoInfo;
+    }
+
+    public int getSignedID() {
+        return signedID;
+    }
+
+    public void setSignedID(int signedID) {
+        this.signedID = signedID;
     }
 
     public boolean isCanPin() {
@@ -141,95 +164,52 @@ public class Post {
         this.canEdit = canEdit;
     }
 
-    public int getIsPinned() {
+    public boolean isPinned() {
         return isPinned;
     }
 
-    public void setIsPinned(int isPinned) {
-        this.isPinned = isPinned;
+    public void setPinned(boolean pinned) {
+        isPinned = pinned;
     }
 
-    public int getMarkedAsAds() {
+    public boolean isMarkedAsAds() {
         return markedAsAds;
     }
 
-    public void setMarkedAsAds(int markedAsAds) {
+    public void setMarkedAsAds(boolean markedAsAds) {
         this.markedAsAds = markedAsAds;
     }
 
-    public boolean isFavorite() {
-        return isFavorite;
+    public boolean isFavourite() {
+        return isFavourite;
     }
 
-    public void setFavorite(boolean favorite) {
-        isFavorite = favorite;
+    public void setFavourite(boolean favourite) {
+        isFavourite = favourite;
     }
 
-    public int getPostponedId() {
-        return postponedId;
+    public int getPostponedID() {
+        return postponedID;
     }
 
-    public void setPostponedId(int postponedId) {
-        this.postponedId = postponedId;
+    public void setPostponedID(int postponedID) {
+        this.postponedID = postponedID;
     }
 
-    public int getSubjectId() {
-        return subjectId;
+    public String getImageURL() {
+        return imageURL;
     }
 
-    public void setSubjectId(int subjectId) {
-        this.subjectId = subjectId;
+    public void setImageURL(String imageURL) {
+        this.imageURL = imageURL;
     }
 
-    public int getUrlSource() {
-        return urlSource;
+    public String getPostType() {
+        return postType;
     }
 
-    public void setUrlSource(int urlSource) {
-        this.urlSource = urlSource;
-    }
-
-    public boolean isSignatureView() {
-        return signatureView;
-    }
-
-    public void setSignatureView(boolean signatureView) {
-        this.signatureView = signatureView;
-    }
-
-    public int getLikeSum() {
-        return likeSum;
-    }
-
-    public void setLikeSum(int likeSum) {
-        this.likeSum = likeSum;
-    }
-
-    public int getCommentSum() {
-        return commentSum;
-    }
-
-    public void setCommentSum(int commentSum) {
-        this.commentSum = commentSum;
-    }
-
-    public int getShareSum() {
-        return shareSum;
-    }
-
-    public void setShareSum(int shareSum) {
-        this.shareSum = shareSum;
-    }
-
-    public int getViewSum() {
-        return viewSum;
-    }
-
-    public void setViewSum(int viewSum) {
-        this.viewSum = viewSum;
+    public void setPostType(String postType) {
+        this.postType = postType;
     }
 }
-
-
-
 
